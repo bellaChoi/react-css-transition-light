@@ -1,0 +1,106 @@
+body {
+  background-color: #D3D0CB;
+  text-align: center;
+
+  .footer {
+    position: fixed;
+    left: 0px; bottom: 0px; right: 0px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 14px;
+    background-color: #9FB1BC;
+    color: #fff;
+    padding-left: 20px;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.translate3d (@x, @y, @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform: translate3d(@x, @y, @z);
+  -ms-transform: translate3d(@x, @y, @z);
+  -o-transform: translate3d(@x, @y, @z);
+  transform: translate3d(@x, @y, @z);
+}
+
+.transition (@type, @duration) {
+  -webkit-transition: @type @duration ease;
+  -moz-transition: @type @duration ease;
+  -ms-transition: @type @duration ease;
+  -o-transition: @type @duration ease;
+  transition: @type @duration ease;
+}
+
+.example-container {
+	position: absolute;
+	width: 100px; height: 120px;
+	top: 50%; left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+
+	p {
+    position: absolute;
+    top: -40px;
+	}
+}
+
+.box-wrapper {
+	position: relative;
+	width: 100%; height: 100px;
+}
+
+.add {
+	position: absolute;
+	z-index: 0;
+	top: 0px; left: 0px;
+	border: 3px dashed #E2C044;
+	width: 100%; height: 100%;
+	color: #E2C044;
+	font-size: 30px;
+}
+
+.example-box {
+  position: relative;
+  line-height: 100px;
+  color: #fff;
+	display: inline-block;
+	width: 100px; height: 100px;
+	background-color: #E2C044;
+  .transition(opacity, 1000ms);
+
+	.state {
+		background-color: #E2C044;
+		color: #fff;
+		font-size: 16px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&.in {
+		opacity: 1;
+	}
+
+	&.out {
+		opacity: 0;
+	}
+
+	&.enter {
+		opacity: 1;
+	}
+
+	&.leave {
+		opacity: 0;
+	}
+}
