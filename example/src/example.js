@@ -1,50 +1,50 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
-var ReactCssTransition = require('react-css-transition')
+var React = require('react');
+var ReactDOM = require('react-dom');
+var ReactCssTransition = require('react-css-transition');
 
 class App extends React.Component {
   constructor (props) {
-    super(props)
+    super(props);
 
     this.state = {
       isShow: true,
       state: ''
-    }
+    };
   }
 
   togglePopup () {
-    let obj = {}
+    let obj = {};
     if (this.state.isShow) {
-      obj = { 'isShow': false }
+      obj = { 'isShow': false };
     } else {
-      obj = { 'isShow': true }
+      obj = { 'isShow': true };
     }
 
-    this.setState(obj)
+    this.setState(obj);
   }
 
   onInTransitionStart () {
     this.setState({
       state: 'IN - start'
-    })
+    });
   }
 
   onInTransitionEnd () {
     this.setState({
       state: 'IN - end'
-    })
+    });
   }
 
   onOutTransitionStart () {
     this.setState({
       state: 'OUT - start'
-    })
+    });
   }
 
   onOutTransitionEnd () {
     this.setState({
       state: 'OUT - end'
-    })
+    });
   }
 
   render () {
@@ -67,11 +67,11 @@ class App extends React.Component {
             </ReactCssTransition>
           </div>
         </div>
-      )
+      );
     } catch (err) {
-      debugger
+      debugger;
     }
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'));
