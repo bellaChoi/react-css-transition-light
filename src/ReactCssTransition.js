@@ -3,19 +3,19 @@ import React, { PropTypes } from 'react';
 const propTypes = {
   visible: PropTypes.bool,
   className: PropTypes.string,
-  outDuration: PropTypes.number,
-  inDuration: PropTypes.number,
-  onInTransitionStart: PropTypes.func,
-  onInTransitionEnd: PropTypes.func,
-  onOutTransitionStart: PropTypes.func,
-  onOutTransitionEnd: PropTypes.func,
+  leaveTimeout: PropTypes.number,
+  enterTimeout: PropTypes.number,
+  onEnterTransitionStart: PropTypes.func,
+  onEnterTransitionEnd: PropTypes.func,
+  onLeaveTransitionStart: PropTypes.func,
+  onLeaveTransitionEnd: PropTypes.func,
   options: PropTypes.object
 };
 
 const defaultProps = {
   visible: true,
-  inDuration: 500,
-  outDuration: 500,
+  enterTimeout: 500,
+  leaveTimeout: 500,
 };
 
 class Animation extends React.Component {
@@ -62,15 +62,15 @@ class Animation extends React.Component {
 
     console.log('setState - show');
     setTimeout(() => {
-      this.props.onInTransitionStart && this.props.onInTransitionStart();
+      this.props.onEnterTransitionStart && this.props.onEnterTransitionStart();
       console.log('enter start');
       this.setState({ animationState: 'enter' });
 
       this.enterTimeout = setTimeout(() => {
         console.log('enter end');
-        this.props.onInTransitionEnd && this.props.onInTransitionEnd();
+        this.props.onEnterTransitionEnd && this.props.onEnterTransitionEnd();
         this.setState({ animationState: 'active' });
-      }, this.props.inDuration);
+      }, this.props.enterTimeout);
     }, 100);
   }
 
@@ -84,8 +84,8 @@ class Animation extends React.Component {
       animationState: 'leave'
     });
 
-    this.props.onOutTransitionStart && this.props.onOutTransitionStart();
-    this.leaveTimeout = setTimeout(this.onClose.bind(this), this.props.outDuration);
+    this.props.onLeaveTransitionStart && this.props.onLeaveTransitionStart();
+    this.leaveTimeout = setTimeout(this.onClose.bind(this), this.props.leaveTimeout);
   }
 
   onClose () {
@@ -95,7 +95,7 @@ class Animation extends React.Component {
         isShow: false
       });
 
-      this.props.onOutTransitionEnd && this.props.onOutTransitionEnd();
+      this.props.onLeaveTransitionEnd && this.props.onLeaveTransitionEnd();
     }
 
   }

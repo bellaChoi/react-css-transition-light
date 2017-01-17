@@ -1,6 +1,6 @@
 {
   "name": "react-css-transition",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-css-transition",
   "main": "lib/ReactCssTransition.js",
   "author": "bellaChoi",

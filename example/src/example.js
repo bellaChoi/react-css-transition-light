@@ -23,25 +23,25 @@ class App extends React.Component {
     this.setState(obj);
   }
 
-  onInTransitionStart () {
+  onEnterTransitionStart () {
     this.setState({
       state: 'IN - start'
     });
   }
 
-  onInTransitionEnd () {
+  onEnterTransitionEnd () {
     this.setState({
       state: 'IN - end'
     });
   }
 
-  onOutTransitionStart () {
+  onLeaveTransitionStart () {
     this.setState({
       state: 'OUT - start'
     });
   }
 
-  onOutTransitionEnd () {
+  onLeaveTransitionEnd () {
     this.setState({
       state: 'OUT - end'
     });
@@ -56,12 +56,12 @@ class App extends React.Component {
             <button className="add" onClick={this.togglePopup.bind(this)}>+</button>
             <ReactCssTransition className='example-box'
               visible={this.state.isShow}
-              inDuration={1000}
-              outDuration={1000}
-              onInTransitionStart={this.onInTransitionStart.bind(this)}
-              onInTransitionEnd={this.onInTransitionEnd.bind(this)}
-              onOutTransitionStart={this.onOutTransitionStart.bind(this)}
-              onOutTransitionEnd={this.onOutTransitionEnd.bind(this)}
+              enterTimeout={1000}
+              leaveTimeout={1000}
+              onEnterTransitionStart={this.onEnterTransitionStart.bind(this)}
+              onEnterTransitionEnd={this.onEnterTransitionEnd.bind(this)}
+              onLeaveTransitionStart={this.onLeaveTransitionStart.bind(this)}
+              onLeaveTransitionEnd={this.onLeaveTransitionEnd.bind(this)}
               options={{ onClick: this.togglePopup.bind(this) }} >
               Click!
             </ReactCssTransition>

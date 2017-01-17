@@ -1,7 +1,6 @@
 # react-css-transition
 
-__COMPONENT DESCRIPTION GOES HERE__
-
+react-css-transition is an easy way to perform CSS transitions and animations when a React Componenet enters or leaves the DOM.
 
 ## Demo & Examples
 
@@ -17,7 +16,7 @@ npm start
 Then open [`localhost:8000`](http://localhost:8000) in a browser.
 
 
-## Installation
+## Enterstallation
 
 The easiest way to use react-css-transition is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
 
@@ -30,21 +29,58 @@ npm install react-css-transition --save
 
 ## Usage
 
-__EXPLAIN USAGE HERE__
 
 ```
 var ReactCssTransition = require('react-css-transition');
 
-<ReactCssTransition>Example</ReactCssTransition>
+<ReactCssTransition className='example-box'
+  visible={this.state.isShow}
+  enterTimeout={1000}
+  leaveTimeout={1000}
+  onEnterTransitionStart={this.onEnterTransitionStart.bind(this)}
+  onEnterTransitionEnd={this.onEnterTransitionEnd.bind(this)}
+  onLeaveTransitionStart={this.onLeaveTransitionStart.bind(this)}
+  onLeaveTransitionEnd={this.onLeaveTransitionEnd.bind(this)}
+  options={{ onClick: this.togglePopup.bind(this) }} > Click! </ReactCssTransition>
 ```
 
 ### Properties
 
-* __DOCUMENT PROPERTIES HERE__
+|    Property    | Type |          Description          | Default |
+| -------------  | ---- |          -----------          | ------- |
+| visible | bool | Initialize state | True |
+| className | string | custom class name |  |
+| enterTimeout | number | the number of milliseconds | 500 |
+| leaveTimeout | number | the number of milliseconds | 500 |
+| options | object | other props |  |
+| onEnterTransitionStart | function | called at the start of 'enter transition' |  |
+| onEnterTransitionEnd | function | called at the end of 'enter transition' |  |
+| onLeaveTransitionStart | function | called at the start of 'leave transition' |  |
+| onLeaveTransitionEnd | function | called at the end of 'leave transition' |  |
 
 ### Notes
 
-__ADDITIONAL USAGE NOTES__
+In css, className according to transition state is defined as follows.
+when className is 'example',
+
+```
+.example-box {
+  ...
+  -webkit-transition: opacity 1000ms ease;
+  -moz-transition: opacity 1000ms ease;
+  -ms-transition: opacity 1000ms ease;
+  -o-transition: opacity 1000ms ease;
+  transition: opacity 1000ms ease;
+}
+
+.example-box.enter {
+  opacity: 1;
+}
+.example-box.leave {
+  opacity: 0;
+}
+
+```
 
 
 ## Development (`src`, `lib` and the build process)
@@ -54,8 +90,6 @@ __ADDITIONAL USAGE NOTES__
 To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
 
 ## License
-
-__PUT LICENSE HERE__
 
 Copyright (c) 2017 bellaChoi.
 
