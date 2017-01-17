@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "react-css-transition",
   "main": "lib/ReactCssTransition.js",
-  "author": "bellaChoi",
+  "author": "BellaChoi",
   "homepage": "https://github.com/BellaChoi/react-css-transition",
   "repository": {
     "type": "git",
@@ -42,6 +42,13 @@
   },
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "react css",
+    "react transition",
+    "css transition",
+    "css transition group",
+    "react ngAnimation",
+    "react animation",
+    "react css transition"
   ]
 }
