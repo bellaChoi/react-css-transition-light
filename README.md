@@ -18,7 +18,7 @@ npm start
 Then open [`localhost:8000`](http://localhost:8000) in a browser.
 
 
-## Enterstallation
+## Installation
 
 The easiest way to use react-css-transition is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
 
