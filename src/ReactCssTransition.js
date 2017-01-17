@@ -18,7 +18,7 @@ const defaultProps = {
   leaveTimeout: 500,
 };
 
-class Animation extends React.Component {
+class ReactCssTransition extends React.Component {
   constructor (props) {
     super(props);
 
@@ -115,7 +115,7 @@ class Animation extends React.Component {
   }
 }
 
-Animation.propTypes = propTypes;
-Animation.defaultProps = defaultProps;
+ReactCssTransition.propTypes = propTypes;
+ReactCssTransition.defaultProps = defaultProps;
 
-export default Animation;
+export default ReactCssTransition;

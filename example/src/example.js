@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactCssTransition = require('react-css-transition');
+var ReactCssTransition = require('react-css-transition-light');
 
 class App extends React.Component {
   constructor (props) {

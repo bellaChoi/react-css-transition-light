@@ -40,13 +40,13 @@ var defaultProps = {
   leaveTimeout: 500
 };
 
-var Animation = (function (_React$Component) {
-  _inherits(Animation, _React$Component);
+var ReactCssTransition = (function (_React$Component) {
+  _inherits(ReactCssTransition, _React$Component);
 
-  function Animation(props) {
-    _classCallCheck(this, Animation);
+  function ReactCssTransition(props) {
+    _classCallCheck(this, ReactCssTransition);
 
-    _get(Object.getPrototypeOf(Animation.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(ReactCssTransition.prototype), 'constructor', this).call(this, props);
 
     this.state = {
       isShow: false,
@@ -54,7 +54,7 @@ var Animation = (function (_React$Component) {
     };
   }
 
-  _createClass(Animation, [{
+  _createClass(ReactCssTransition, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.visible) {
@@ -150,13 +150,13 @@ var Animation = (function (_React$Component) {
     }
   }]);
 
-  return Animation;
+  return ReactCssTransition;
 })(_react2['default'].Component);
 
-Animation.propTypes = propTypes;
-Animation.defaultProps = defaultProps;
+ReactCssTransition.propTypes = propTypes;
+ReactCssTransition.defaultProps = defaultProps;
 
-exports['default'] = Animation;
+exports['default'] = ReactCssTransition;
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
