@@ -1,4 +1,6 @@
-# react-css-transition
+# react-css-transition-light
+
+[![version](https://img.shields.io/npm/v/react-css-transition-light.svg) ![download](https://img.shields.io/npm/dm/react-css-transition-light.svg)](https://www.npmjs.com/package/react-css-transition-light)
 
 react-css-transition is an easy way to perform CSS transitions and animations when a React Componenet enters or leaves the DOM.
 
