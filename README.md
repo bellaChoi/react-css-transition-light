@@ -6,7 +6,7 @@ react-css-transition is an easy way to perform CSS transitions and animations wh
 
 ## Demo & Examples
 
-Live demo: [BellaChoi.github.io/react-css-transition](http://BellaChoi.github.io/react-css-transition/)
+Live demo: [BellaChoi.github.io/react-css-transition-light](http://BellaChoi.github.io/react-css-transition/)
 
 To build the examples locally, run:
 
