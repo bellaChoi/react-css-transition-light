@@ -11,7 +11,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== 'function' 
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactCssTransition = require('react-css-transition');
+var ReactCssTransition = require('react-css-transition-light');
 
 var App = (function (_React$Component) {
   _inherits(App, _React$Component);
@@ -113,4 +113,4 @@ var App = (function (_React$Component) {
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
-},{"react":undefined,"react-css-transition":undefined,"react-dom":undefined}]},{},[1]);
+},{"react":undefined,"react-css-transition-light":undefined,"react-dom":undefined}]},{},[1]);

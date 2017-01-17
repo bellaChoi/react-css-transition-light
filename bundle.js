@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"react-css-transition":[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"react-css-transition-light":[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -39,13 +39,13 @@ var defaultProps = {
   leaveTimeout: 500
 };
 
-var Animation = (function (_React$Component) {
-  _inherits(Animation, _React$Component);
+var ReactCssTransition = (function (_React$Component) {
+  _inherits(ReactCssTransition, _React$Component);
 
-  function Animation(props) {
-    _classCallCheck(this, Animation);
+  function ReactCssTransition(props) {
+    _classCallCheck(this, ReactCssTransition);
 
-    _get(Object.getPrototypeOf(Animation.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(ReactCssTransition.prototype), 'constructor', this).call(this, props);
 
     this.state = {
       isShow: false,
@@ -53,7 +53,7 @@ var Animation = (function (_React$Component) {
     };
   }
 
-  _createClass(Animation, [{
+  _createClass(ReactCssTransition, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.visible) {
@@ -149,13 +149,13 @@ var Animation = (function (_React$Component) {
     }
   }]);
 
-  return Animation;
+  return ReactCssTransition;
 })(_react2['default'].Component);
 
-Animation.propTypes = propTypes;
-Animation.defaultProps = defaultProps;
+ReactCssTransition.propTypes = propTypes;
+ReactCssTransition.defaultProps = defaultProps;
 
-exports['default'] = Animation;
+exports['default'] = ReactCssTransition;
 module.exports = exports['default'];
 
 },{"react":undefined}]},{},[]);
