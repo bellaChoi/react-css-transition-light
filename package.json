@@ -1,16 +1,16 @@
 {
-  "name": "react-css-transition",
+  "name": "react-css-transition-light",
   "version": "1.0.1",
-  "description": "react-css-transition",
+  "description": "react-css-transition-light",
   "main": "lib/ReactCssTransition.js",
   "author": "BellaChoi",
-  "homepage": "https://github.com/BellaChoi/react-css-transition",
+  "homepage": "https://github.com/BellaChoi/react-css-transition-light",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BellaChoi/react-css-transition.git"
+    "url": "https://github.com/BellaChoi/react-css-transition-light.git"
   },
   "bugs": {
-    "url": "https://github.com/BellaChoi/react-css-transition/issues"
+    "url": "https://github.com/BellaChoi/react-css-transition-light/issues"
   },
   "dependencies": {
     "classnames": "^2.1.2"
